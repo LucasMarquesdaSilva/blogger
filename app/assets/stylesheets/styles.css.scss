@@ -18,9 +18,6 @@ ul, li{
 ul, li, a:hover{
   color: #FA8072;
 }
-#articles{
-  text-decoration: none;
-}
 body{
   background-color: #DCDCDC;
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -58,7 +55,7 @@ hr{
 }
 .li-article{
   width: 95%;
-  border-bottom: 1px dashed lightgray;
+  border-bottom: 2px dashed lightgray;
 }
 .button_article{
   margin-top: 5px;
@@ -117,7 +114,6 @@ label{
 }
 .comment-group{
   border-bottom: 1px solid gray;
-  padding: 10px 10px 15px 20px;
 }
 .h3-comment{
   padding: 5px 0px 5px 0px;

@@ -1,6 +1,6 @@
 <h1 class >All Articles</h1>
 <div class = "body">
-  <ul id="articles">
+  <ul>
     <% @articles.each do |article| %>
       <li class= "li-article">
         <%= link_to article.title, article_path(article), class: 'article_title',
