@@ -1,6 +1,7 @@
 <h1>Editing Author</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @author %> |
-<%= link_to 'Back', authors_path %>
+<div class = "body">
+  <%= link_to 'Show', @author, class: "btn btn-danger" %>
+  <%= link_to 'Back', authors_path , class: "btn btn-danger" %>
+</div>

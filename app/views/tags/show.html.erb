@@ -1,9 +1,11 @@
 <h1>Articles Tagged with <%= @tag.name %></h1>
-<% if logged_in?%>
-  <%= link_to "delete tag", tag_path(@tag), method: :delete, data: {confirm: "Really delete the article?"} %>
-<% end %>
-<ul>
-  <% @tag.articles.each do |article| %>
-    <li><%= link_to article.title, article_path(article) %></li>
+<div class = "body">
+  <% if logged_in?%>
+    <%= link_to "delete tag", tag_path(@tag), class: "btn btn-danger", method: :delete, data: {confirm: "Really delete the article?"} %>
   <% end %>
-</ul>
+  <ul>
+    <% @tag.articles.each do |article| %>
+      <li><%= link_to article.title, article_path(article) %></li>
+    <% end %>
+  </ul>
+</div>

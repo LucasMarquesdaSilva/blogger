@@ -1,14 +1,14 @@
 <h3>Post a Comment</h3>
 <%= form_for [@article, @comment] do |f| %>
-  <p>
+  <div class = "form-groups">
     <%= f.label :author_name, "Your Name" %><br/>
-    <%= f.text_field :author_name %>
-  </p>
-  <p>
+    <%= f.text_field :author_name, class: "form-control" %>
+  </div>
+  <div class = "form-groups">
     <%= f.label :body, "Your Comment" %><br/>
-    <%= f.text_field :body %>
-  </p>
+    <%= f.text_field :body, class: "form-control" %>
+  </div>
   <p>
-    <%= f.submit 'Submit' %>
+    <%= f.submit class: "btn btn-default" %>
   </p>
 <% end %>

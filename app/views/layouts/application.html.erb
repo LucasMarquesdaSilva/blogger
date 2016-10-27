@@ -7,22 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
-  <div id="container">
-    <div id="content">
-      <%= yield %>
-      <hr>
-      <h6>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <%= link_to 'Home', articles_path, class: "navbar-brand"%>
+      <button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">Menu</button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Articles', articles_path %></li>
+        <li><%= link_to 'Authors', authors_path %></li>
+        <li><%= link_to 'Tags', tags_path%></li>
+      </ul>
+      <p class="navbar-text navbar-right">
         <% if logged_in? %>
           <%= "Logged in as #{current_user.username}" %>
-          <%= link_to "(logout)", logout_path %>
+          <%= link_to "(logout)", logout_path  %>
         <% else %>
           Logged out
           <%= link_to "(login)", login_path %>
         <% end %>
-      </h6>
+      </p>
+  </nav>
+  <p class="flash">
+    <%= flash.notice %>
+  </p>
+  <div class="container">
+    <div class="content">
+      <%= yield %>
     </div>
   </div>
 </body>

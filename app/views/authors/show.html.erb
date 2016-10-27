@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class = "show-body-author">
+  <div class = "body">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @author.username %>
-</p>
+    <p>
+      <strong>Username:</strong>
+      <%= @author.username %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @author.email %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @author.email %>
+    </p>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+    <%= link_to 'Edit', edit_author_path(@author), class: "btn btn-danger"%>
+    <%= link_to 'Back', authors_path, class: "btn btn-danger"%>
+  </div>
+</div>

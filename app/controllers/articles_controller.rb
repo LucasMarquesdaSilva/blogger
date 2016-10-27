@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(articles_params)
+    @article.author = current_user
     @article.save
     flash.notice = "Article '#{@article.title}' Created!"
     redirect_to article_path(@article)
@@ -39,10 +40,12 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
-    flash.notice = "Article '#{@article.title}' Destroyed!"
-    redirect_to articles_path
+    if logged_in? || current_user == @article.author
+      @article = Article.find(params[:id])
+      @article.destroy
+      flash.notice = "Article '#{@article.title}' Destroyed!"
+      redirect_to articles_path
+    end
   end
 
 end
