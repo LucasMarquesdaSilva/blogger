@@ -28,12 +28,14 @@
         <% end %>
       </p>
   </nav>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
   <div class="container">
     <div class="content">
       <%= yield %>
+      <div class = "body">
+      <div class="flash">
+        <%= flash.notice %>
+      </div>
+    </div>
     </div>
   </div>
 </body>

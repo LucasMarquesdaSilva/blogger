@@ -1,6 +1,6 @@
 .container{
   width: 80%;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 .content{
@@ -94,9 +94,6 @@ form textarea:focus{
   border-color:#81b1df;
   background-color:#fff;
 }
-.form-control{
-  width: 80%;
-}
 .text-tags{
   height: 4em;
 }
@@ -105,9 +102,6 @@ form textarea:focus{
 }
 label{
   font-size: 1.5em;
-}
-.form-control{
-  width: 30%;
 }
 .navbar-right{
   margin-right: 15px;
@@ -123,4 +117,11 @@ label{
 }
 .show-body-author{
   margin-top: 2%;
+}
+.flash{
+  font-size: 1.5em;
+  color: #A52A2A;
+}
+#form-class{
+  width: 30%;
 }

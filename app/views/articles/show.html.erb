@@ -17,7 +17,9 @@
     <%= link_to "edit", edit_article_path(@article), class: "btn btn-default" %>
   <% end %>
 </div>
+<% unless @article.comments.count.zero? %>
   <h3 class="h3-comment">Comments (<%= @article.comments.size %>)</h3>
+<% end %>
 <div class = "body">
   <%= render partial: 'articles/comment', collection: @article.comments %>
 </div>

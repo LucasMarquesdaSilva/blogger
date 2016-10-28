@@ -2,11 +2,11 @@
 <%= form_for [@article, @comment] do |f| %>
   <div class = "form-groups">
     <%= f.label :author_name, "Your Name" %><br/>
-    <%= f.text_field :author_name, class: "form-control" %>
+    <%= f.text_field :author_name, class: "form-control", id: "form-class" %>
   </div>
   <div class = "form-groups">
     <%= f.label :body, "Your Comment" %><br/>
-    <%= f.text_field :body, class: "form-control" %>
+    <%= f.text_field :body, class: "form-control", id: "form-class" %>
   </div>
   <p>
     <%= f.submit class: "btn btn-default" %>
